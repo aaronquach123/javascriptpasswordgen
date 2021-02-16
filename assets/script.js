@@ -6,13 +6,14 @@ var lengthOption = function() {
   if (isNaN(lengthOptionPrompt) || lengthOptionPrompt === null || lengthOptionPrompt === "") {
     window.alert("Please supply an integer number between 8 and 128.");
     return lengthOption();
-  };
+  }
   //turn back into integer
-  lengthOption = parseInt(lengthOptionPrompt)
+  integerLength = parseInt(lengthOptionPrompt)
   //statement to check if between 8 and 128
-  if (lengthOption < 8 || lengthOption > 128) {
+  if (lengthOptionPrompt < 8 || lengthOptionPrompt > 128) {
     window.alert("Please supply an integer number between 8 and 128.");
-  };
+    return lengthOption();
+  }
 };
 
 //function to determine password character set
@@ -38,19 +39,19 @@ var characterChoice = function () {
   //Turns the array back into a string
   options = options.join("");
   charSet = options.toString();
-  console.log(charSet);
-}
+};
+
 // Calls choice and length function to supply variables at button press
 var generatePassword = function() {
   characterChoice();
   lengthOption();
   //Uses the length of the character set and randomly chooses from the list
   var password = "";
-  debugger;
-  for (var i = 0; i < lengthOption; i++) {
+  for (var i = 0; i < integerLength; i++) {
     password += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
   console.log(password);
+  return (password);
 };
 
 
@@ -59,11 +60,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  console.log(password);
+  passwordText.value = generatePassword();
 };
 
 // Add event listener to generate button

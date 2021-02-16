@@ -15,9 +15,9 @@
 https://aaronquach123.github.io/javascriptpasswordgen/
 
 ## Screenshots
-![Screenshot of pseudocode](./assets/images/screenshots/pseudocode.PNG)
-![Screenshot of utility code](./assets/images/screenshots/character-choice-generator.PNG)
-![Screenshot of length checker](./assets/images/screenshots/length-checker.PNG)
+![Screenshot of pseudocode](./assets/images/screenshots/pseudocode.png)
+![Screenshot of character generator and selector](./assets/images/screenshots/character-choice-generator.png)
+![Screenshot of length checker](./assets/images/screenshots/length-checker.png)
 
 ## Credits
 Credits for helping me through my javascript problems to the TAS!
